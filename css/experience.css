@@ -1,0 +1,78 @@
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  padding: 24px 0;
+  border-bottom: 1px dashed var(--grid-bright);
+  transition: background 0.3s;
+}
+
+.timeline-item:hover {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-date {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.timeline-num {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--grid-bright);
+  line-height: 1;
+  font-family: var(--display);
+  letter-spacing: -0.02em;
+}
+
+.timeline-role {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-bright);
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.timeline-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.timeline-list {
+  max-width: 620px;
+  list-style: none;
+}
+
+.timeline-list li {
+  position: relative;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  padding-left: 16px;
+  margin-bottom: 8px;
+}
+
+.timeline-list li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-list li::before {
+  content: '/';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}

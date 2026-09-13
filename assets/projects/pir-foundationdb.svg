@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2e2a24" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="560" height="320" fill="#1b1916"/>
+  <rect width="560" height="320" fill="url(#grid)"/>
+  <rect x="0.5" y="0.5" width="559" height="319" fill="none" stroke="#2e2a24"/>
+  <text x="20" y="28" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#5c5549">/==/ PIR-against-FoundationDB ==/</text>
+
+  <!-- lock icon -->
+  <g transform="translate(280,150)" stroke="#c4915e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-40" y="-6" width="80" height="60" rx="6"/>
+    <path d="M -24 -6 L -24 -30 A 24 24 0 0 1 24 -30 L 24 -6"/>
+    <circle cx="0" cy="20" r="6" fill="#c4915e" stroke="none"/>
+    <path d="M 0 26 L 0 38" stroke-width="4"/>
+  </g>
+
+  <text x="280" y="235" text-anchor="middle" font-family="'Outfit',Arial,sans-serif" font-weight="700" font-size="24" fill="#d8cfc0" letter-spacing="-0.5">Private Information Retrieval</text>
+  <text x="280" y="260" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#5c5549">oblivious storage layer for FoundationDB</text>
+
+  <text x="20" y="300" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" fill="#3a362f">[ screenshot placeholder — replace at assets/projects/pir-foundationdb.svg ]</text>
+</svg>

@@ -1,0 +1,227 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 56px;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+}
+
+.hero-label-slash {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* ---- Two-line name ---- */
+.hero-name {
+  margin-bottom: 32px;
+}
+
+.hero-name-line {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(52px, 11vw, 160px);
+  line-height: 0.92;
+  color: var(--text-white);
+  letter-spacing: -0.04em;
+  display: block;
+}
+
+/* ---- Bottom row: desc + resume ---- */
+.hero-bottom {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-desc {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: var(--text-dim);
+  max-width: 460px;
+  line-height: 1.7;
+}
+
+.hero-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 24px;
+  border: 1px solid var(--grid-bright);
+  color: var(--text-bright);
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background: transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero-resume-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(196, 145, 94, 0.06);
+  transform: translateY(-2px);
+}
+
+.hero-resume-icon {
+  font-size: 14px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.hero-resume-btn:hover .hero-resume-icon {
+  transform: translateY(3px);
+}
+
+/* ---- Terminal panel ---- */
+.hero-terminal {
+  margin-top: 56px;
+  max-width: 460px;
+  border: 1px solid var(--grid-bright);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+}
+
+.hero-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-lighter);
+  border-bottom: 1px solid var(--grid-bright);
+}
+
+.hero-terminal-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--grid-bright);
+}
+
+.hero-terminal-dot:nth-child(1) { background: #c45e5e; }
+.hero-terminal-dot:nth-child(2) { background: #c4a85e; }
+.hero-terminal-dot:nth-child(3) { background: #5ec46a; }
+
+.hero-terminal-title {
+  margin-left: 8px;
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+.hero-terminal-body {
+  padding: 18px 18px 20px;
+  font-size: 12px;
+  line-height: 1.95;
+}
+
+.hero-terminal-line {
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+
+.hero-terminal-line.final {
+  margin-top: 2px;
+}
+
+.hero-terminal-prompt {
+  color: var(--accent);
+  margin-right: 10px;
+}
+
+.hero-terminal-cmd {
+  color: var(--text-bright);
+}
+
+.hero-terminal-out {
+  display: block;
+  color: var(--text-dim);
+  padding-left: 20px;
+  margin-bottom: 2px;
+  overflow-wrap: break-word;
+}
+
+.hero-terminal-out.accent {
+  color: var(--accent);
+}
+
+.hero-terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--text-dim);
+  vertical-align: -2px;
+  opacity: 0;
+}
+
+.hero-terminal-cursor.blink {
+  opacity: 1;
+  animation: blink 1s step-end infinite;
+}
+
+/* ---- Scroll indicator ---- */
+.hero-scroll {
+  position: fixed;
+  bottom: 48px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+  transition: opacity 0.4s ease;
+}
+
+.hero-scroll.hidden {
+  /* !important: wins the specificity tie against .anim-hero.in (opacity:1) in animations.css */
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.hero-scroll-text {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 48px;
+  background: var(--grid-bright);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-scroll-line::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%   { top: -100%; }
+  50%  { top: 100%; }
+  100% { top: 100%; }
+}

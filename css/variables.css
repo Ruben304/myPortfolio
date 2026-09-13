@@ -1,0 +1,25 @@
+:root {
+  --bg:           #141210;
+  --bg-lighter:   #1b1916;
+  --bg-card:      #211f1b;
+  --text:         #a89f8f;
+  --text-dim:     #5c5549;
+  --text-bright:  #d8cfc0;
+  --text-white:   #ece6da;
+  --accent:       #c4915e;
+  --accent-hover: #daa876;
+  --accent-cool:  #6a9fa8;
+  --grid:         #1f1d19;
+  --grid-bright:  #2e2a24;
+  --scanline:     rgba(180, 160, 120, 0.015);
+  --glow:         rgba(196, 145, 94, 0.06);
+  --mono:         'JetBrains Mono', 'Courier New', monospace;
+  --display:      'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}

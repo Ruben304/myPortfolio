@@ -1,0 +1,252 @@
+/* ============================================= */
+/* EDUCATION                                     */
+/* ============================================= */
+
+/* ---- Card layout (mirrors .timeline-item grid) ---- */
+.edu-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  padding: 32px 0 28px;
+  border-bottom: 1px dashed var(--grid-bright);
+}
+
+.edu-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Large display number — identical style to .timeline-num */
+.edu-num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--grid-bright);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.edu-years {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* ---- Degree header ---- */
+.edu-school {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(22px, 3vw, 32px);
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.edu-degree {
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.edu-gpa {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 32px;
+}
+
+.edu-gpa span {
+  color: var(--text-bright);
+}
+
+/* ---- Tabs ---- */
+.edu-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--grid-bright);
+  margin-bottom: 24px;
+}
+
+.edu-tab {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 10px 20px 10px 0;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  margin-bottom: -1px;
+}
+
+.edu-tab:hover {
+  color: var(--text-bright);
+}
+
+.edu-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---- Panels ---- */
+.edu-panel {
+  display: none;
+}
+
+.edu-panel.active {
+  display: block;
+  animation: eduFadeUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes eduFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Coursework ---- */
+.edu-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.edu-course {
+  font-size: 11px;
+  color: var(--text);
+  padding: 6px 14px;
+  border: 1px solid var(--grid-bright);
+  transition: color 0.2s, border-color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.edu-course:hover {
+  color: var(--text-bright);
+  border-color: var(--text-dim);
+}
+
+/* ---- Activities ---- */
+.edu-activity {
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--grid);
+}
+
+.edu-activity:last-child {
+  border-bottom: none;
+}
+
+.edu-activity-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.edu-activity-name {
+  font-size: 13px;
+  color: var(--text-bright);
+  font-weight: 500;
+}
+
+.edu-activity-role {
+  font-size: 11px;
+  color: var(--accent);
+}
+
+.edu-activity-years {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-left: auto;
+}
+
+.edu-activity-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* ---- Honors ---- */
+.edu-honors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.edu-honor-item {
+  display: flex;
+  gap: 18px;
+  padding: 16px 20px;
+  border: 1px solid var(--grid-bright);
+  background: var(--bg-lighter);
+  transition: border-color 0.2s;
+}
+
+.edu-honor-item:hover {
+  border-color: var(--text-dim);
+}
+
+/* Dean's List — accent border + subtle glow */
+.edu-honor-item.dean {
+  border-color: rgba(196, 145, 94, 0.5);
+  background: rgba(196, 145, 94, 0.04);
+}
+
+.edu-honor-icon {
+  font-size: 16px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  line-height: 1.4;
+  width: 20px;
+  text-align: center;
+}
+
+.edu-honor-item.dean .edu-honor-icon {
+  color: var(--accent);
+  animation: honorPulse 3s ease-in-out infinite;
+}
+
+@keyframes honorPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.edu-honor-title {
+  font-size: 13px;
+  color: var(--text-bright);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.edu-honor-detail {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Semester pill row inside Dean's List */
+.edu-honor-semesters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.edu-honor-semesters span {
+  font-size: 10px;
+  color: var(--accent);
+  padding: 3px 10px;
+  border: 1px solid var(--grid-bright);
+  letter-spacing: 0.05em;
+}

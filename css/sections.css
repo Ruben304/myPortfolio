@@ -1,0 +1,47 @@
+/* ---- SECTION TITLE (massive, visible, overlapping) ---- */
+.section-title-wrap {
+  position: relative;
+  margin-bottom: -30px;
+  z-index: 0;
+  overflow: visible;
+}
+
+.section-title {
+  font-family: var(--display);
+  font-weight: 900;
+  font-size: clamp(72px, 12vw, 180px);
+  line-height: 0.85;
+  color: var(--text-white);
+  letter-spacing: -0.04em;
+  opacity: 0.15;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* ---- SECTION BODY ---- */
+.section-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- ASCII BORDERS ---- */
+.ascii-border {
+  font-size: 11px;
+  color: var(--text-dim);
+  opacity: 0.3;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  margin: 4px 0;
+}
+
+/* ---- SECTION LABEL ---- */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-bright);
+  padding: 12px 0;
+}

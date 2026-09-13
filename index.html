@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruben — Web Engineer & Creative Coder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/experience.css">
+  <link rel="stylesheet" href="css/education.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-line" id="loaderLine1"></div>
+      <div class="loader-line" id="loaderLine2"></div>
+      <div class="loader-line" id="loaderLine3"></div>
+      <div class="loader-text">
+        <span class="loader-name">RUBEN F. CARBAJAL</span>
+        <span class="loader-role">// initializing</span>
+      </div>
+      <div class="loader-bar"><div class="loader-bar-fill" id="loaderBar"></div></div>
+    </div>
+  </div>
+
+  <!-- ASCII BG -->
+  <div class="ascii-bg" aria-hidden="true"><pre id="asciiBg"></pre></div>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">ruben<span class="logo-dim">.dev</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#education" data-nav>Education</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label anim-hero" data-delay="0"><span class="hero-label-slash">/</span> Full Stack Engineer &amp; hobbyist</div>
+        <h1 class="hero-name anim-hero" data-delay="1">
+          <span class="hero-name-line">Ruben F.</span>
+          <span class="hero-name-line">Carbajal</span>
+        </h1>
+        <div class="hero-bottom anim-hero" data-delay="2">
+          <p class="hero-desc">Devloper who likes to expore their interest</p>
+          <a href="resume.pdf" download class="hero-resume-btn">
+            <span class="hero-resume-icon">↓</span> Download Resume
+          </a>
+        </div>
+        <div class="hero-terminal anim-hero" data-delay="3" id="heroTerminal">
+          <div class="hero-terminal-bar">
+            <span class="hero-terminal-dot"></span>
+            <span class="hero-terminal-dot"></span>
+            <span class="hero-terminal-dot"></span>
+            <span class="hero-terminal-title">~/ruben — zsh</span>
+          </div>
+          <div class="hero-terminal-body">
+            <div class="hero-terminal-line"><span class="hero-terminal-prompt">$</span><span class="hero-terminal-cmd" data-text="whoami"></span></div>
+            <div class="hero-terminal-out" data-text="Software Engineer @ JPMorgan Chase &amp; Co · Boston, MA"></div>
+            <div class="hero-terminal-line"><span class="hero-terminal-prompt">$</span><span class="hero-terminal-cmd" data-text="stack --primary"></span></div>
+            <div class="hero-terminal-out" data-text="React · TypeScript · Flask · CockroachDB"></div>
+            <div class="hero-terminal-line"><span class="hero-terminal-prompt">$</span><span class="hero-terminal-cmd" data-text="status"></span></div>
+            <div class="hero-terminal-out accent" data-text="● open to select opportunities"></div>
+            <div class="hero-terminal-line final"><span class="hero-terminal-prompt">$</span><span class="hero-terminal-cursor" id="heroTerminalCursor"></span></div>
+          </div>
+        </div>
+        <div class="hero-scroll anim-hero" data-delay="4">
+          <span class="hero-scroll-text">scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-title-wrap"><h2 class="section-title reveal-title">Experience</h2></div>
+      <div class="section-body">
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="section-label reveal-up">Professional Experience</div>
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="timeline">
+          <div class="timeline-item reveal-up">
+            <div class="timeline-left"><span class="timeline-date">2024 — Present</span><span class="timeline-num">01</span></div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Software Engineer</h3>
+              <p class="timeline-company">JP Morgan Chase & Co</p>
+              <ul class="timeline-list">
+                <li>Built a self-service data exploration tool for slicing records across upstream and downstream sources — React interface, Flask REST endpoints, and CockroachDB schemas joining previously siloed datasets</li>
+                <li>Shipped a visualization layer with 6 configurable chart views and cross-team query sharing, adopted by 7 teams</li>
+                <li>Decoupled a critical workflow from a third-party dependency by rebuilding it in-house — backend architecture, React UI, and an automated file-transfer channel</li>
+                <li>Modernized a legacy app off Oracle onto CockroachDB and Flask, porting 14 years of production data with zero downtime</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up">
+            <div class="timeline-left"><span class="timeline-date">2023</span><span class="timeline-num">02</span></div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Software Engineer Intern</h3>
+              <p class="timeline-company">JP Morgan Chase & Co</p>
+              <ul class="timeline-list">
+                <li>Automated two internal reporting services used by ~110K employees firm-wide, cutting a ~15-minute manual workflow to under ~2 minutes</li>
+                <li>Built the system end to end — React/JavaScript UI, Spring Boot REST endpoints with server-side validation, and Maven-built Java services on AWS</li>
+                <li>Authored Groovy-based Jenkins pipelines for build, test, and deploy; presented the finished tool to stakeholder teams before the internship's end</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item reveal-up">
+            <div class="timeline-left"><span class="timeline-date">2022</span><span class="timeline-num">03</span></div>
+            <div class="timeline-right">
+              <h3 class="timeline-role">Software Engineer Intern</h3>
+              <p class="timeline-company">JP Morgan Chase & Co</p>
+              <p class="timeline-desc">Consulted, designed and developed a business plan and website for a bank partner</p>
+            </div>
+          </div>
+        </div>
+        <div class="ascii-border reveal-up">/++/+++++++++++++++++++++++++++++++++++++/++++++++++++++++++/+++++++++++/</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-title-wrap"><h2 class="section-title reveal-title">Skills</h2></div>
+      <div class="section-body">
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="section-label reveal-up">Professional Skills</div>
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="skills-columns-header reveal-up">
+          <span>/ Languages</span><span>/ AI</span><span>/ Frameworks &amp; Libraries</span><span>/ Databases &amp; Tools</span>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-col">
+            <div class="skill-item reveal-up">Python</div>
+            <div class="skill-item reveal-up">TypeScript</div>
+            <div class="skill-item reveal-up">JavaScript</div>
+            <div class="skill-item reveal-up">SQL</div>
+            <div class="skill-item reveal-up">C</div>
+            <div class="skill-item reveal-up">C++</div>
+            <div class="skill-item reveal-up">Java</div>
+            <div class="skill-item reveal-up">Groovy</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-item reveal-up">GitHub Copilot</div>
+            <div class="skill-item reveal-up">Prompt Engineering</div>
+            <div class="skill-item reveal-up">AI Agents</div>
+            <div class="skill-item reveal-up">Skills Building</div>
+            <div class="skill-item reveal-up">LLM API Integration</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-item reveal-up">React</div>
+            <div class="skill-item reveal-up">Vue.js</div>
+            <div class="skill-item reveal-up">Flask</div>
+            <div class="skill-item reveal-up">SQLAlchemy</div>
+            <div class="skill-item reveal-up">Pydantic</div>
+            <div class="skill-item reveal-up">Pytest</div>
+            <div class="skill-item reveal-up">Spring Boot</div>
+            <div class="skill-item reveal-up">Cypress</div>
+            <div class="skill-item reveal-up">Vite</div>
+            <div class="skill-item reveal-up">AG Grid</div>
+            <div class="skill-item reveal-up">Highcharts</div>
+          </div>
+          <div class="skill-col">
+            <div class="skill-item reveal-up">PostgreSQL</div>
+            <div class="skill-item reveal-up">CockroachDB</div>
+            <div class="skill-item reveal-up">MongoDB</div>
+            <div class="skill-item reveal-up">Oracle</div>
+            <div class="skill-item reveal-up">Git</div>
+            <div class="skill-item reveal-up">Jenkins</div>
+            <div class="skill-item reveal-up">SonarQube</div>
+            <div class="skill-item reveal-up">Poetry</div>
+            <div class="skill-item reveal-up">Maven</div>
+            <div class="skill-item reveal-up">Jira / Agile</div>
+          </div>
+        </div>
+        <div class="ascii-border reveal-up">/++/+++++++++++++++++++++++++++++++++++++/++++++++++++++++++/+++++++++++/</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-title-wrap"><h2 class="section-title reveal-title">Education</h2></div>
+      <div class="section-body">
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="section-label reveal-up">Academic Record</div>
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+
+        <div class="edu-card reveal-up">
+          <div class="edu-card-meta">
+            <span class="edu-num">01</span>
+            <span class="edu-years">2020 — 2024</span>
+          </div>
+          <div class="edu-card-body">
+            <div class="edu-school">Boston University</div>
+            <div class="edu-degree">B.S. Computer Engineering</div>
+            <div class="edu-gpa">GPA <span>3.8 / 4.0</span></div>
+
+            <div class="edu-tabs" role="tablist">
+              <button class="edu-tab active" data-tab="courses">/ Coursework</button>
+              <button class="edu-tab" data-tab="activities">/ Activities</button>
+              <button class="edu-tab" data-tab="honors">/ Honors</button>
+            </div>
+
+            <!-- Coursework -->
+            <div class="edu-panel active" data-panel="courses">
+              <div class="edu-courses">
+                <span class="edu-course">Cloud Computings</span>
+                <span class="edu-course">Learning from Data / Machine Learning</span>
+                <span class="edu-course">Algorithms &amp; Complexity</span>
+                <span class="edu-course">Software Engineering Principles</span>
+                <span class="edu-course">Computer Organization</span>
+                <span class="edu-course">Computer Networking</span>
+                <span class="edu-course">Software Design</span>
+                <span class="edu-course">Signals &amp; Systems</span>
+                <span class="edu-course">Statistics &amp; Data Science</span>
+                <span class="edu-course">Discrete Mathematics</span>
+                <span class="edu-course">Senior Design</span>
+                <span class="edu-course">Modern Physics</span>
+                <span class="edu-course">Business Innovation Technology</span>
+              </div>
+            </div>
+
+            <!-- Activities -->
+            <div class="edu-panel" data-panel="activities">
+              <div class="edu-activity">
+                <div class="edu-activity-header">
+                  <span class="edu-activity-name">Society of Hispanic Professional Engineers Champter</span>
+                  <span class="edu-activity-role">President</span>
+                  <span class="edu-activity-years">2022 — 2024</span>
+                </div>
+                <p class="edu-activity-desc">Led a 12-person team to coordinate 20 events, raise $34k, and sponsor 28 students to National Convention — the chapter's largest funding and engagement in history — while growing membership to 40+ through strategic university, corporate, and executive partnerships.</p>
+              </div>
+              <div class="edu-activity">
+                <div class="edu-activity-header">
+                  <span class="edu-activity-name">BU Spark!</span>
+                  <span class="edu-activity-role">Team Lead</span>
+                  <span class="edu-activity-years">2023 — 2024</span>
+                </div>
+                <p class="edu-activity-desc">Managed a shared budget across multiple clubs and championed inclusive, accessible application design.</p>
+              </div>
+              <div class="edu-activity">
+                <div class="edu-activity-header">
+                  <span class="edu-activity-name">Zen Club</span>
+                  <span class="edu-activity-role">Member</span>
+                  <span class="edu-activity-years">2022 - 2024</span>
+                </div>
+                <p class="edu-activity-desc">Led a 4-person team to place 1st in two regional hackathons. Built a real-time transit app and an accessibility tool for the visually impaired.</p>
+              </div>
+            </div>
+
+            <!-- Honors -->
+            <div class="edu-panel" data-panel="honors">
+              <div class="edu-honors-list">
+                <div class="edu-honor-item dean">
+                  <div class="edu-honor-icon">★</div>
+                  <div class="edu-honor-content">
+                    <div class="edu-honor-title">Dean's List</div>
+                    <div class="edu-honor-detail">Achieved 5 consecutive semesters — top 10% of class</div>
+                    <div class="edu-honor-semesters">
+                      <span>Fll '23</span>
+                      <span>Spr '24</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="edu-honor-item">
+                  <div class="edu-honor-icon">/</div>
+                  <div class="edu-honor-content">
+                    <div class="edu-honor-title">Design Excellence Capstone Project</div>
+                    <div class="edu-honor-detail">Dept. of Electral and Computer Engineering — 2024 cohort recognition</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ascii-border reveal-up">/++/+++++++++++++++++++++++++++++++++++++/++++++++++++++++++/+++++++++++/</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-title-wrap"><h2 class="section-title reveal-title">Projects</h2></div>
+      <div class="section-body">
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="section-label reveal-up">Selected Projects</div>
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="projects-table-head reveal-up">
+          <span>/ Project</span><span>/ Description</span><span>/ Type</span><span>/ Tech</span>
+        </div>
+        <div class="projects-list">
+          <div class="project-row reveal-up" data-id="0"
+               data-title="Houston for Humans" data-tagline="Mapping a more walkable, resilient Houston"
+               data-platform="Web App" data-tech="Next.js 16, TypeScript, Tailwind CSS v4, Mapbox GL JS"
+               data-role="Creator &amp; Developer" data-year="2025"
+               data-url="houston4-humans.vercel.app"
+               data-github="https://github.com/Ruben304/Houston4Humans"
+               data-image="assets/projects/houston4humans.svg"
+               data-overview="An interactive civic-data web app exploring how Houston can become more walkable, transit-connected, and flood-resilient. A full-page Mapbox map anchors data-driven sections making the case for achievable urban improvement, with WebGL map logic isolated into SSR-safe dynamic Client Components."
+               data-features="Full-page interactive map built with Mapbox GL JS via react-map-gl|Three toggleable GeoJSON layers: walk-score gradient, existing/proposed rail &amp; BRT, flood-risk zones|Server Components render static content while map logic loads client-side only|SSR-safe dynamic imports prevent WebGL errors during server rendering|Built on Next.js 16 App Router with TypeScript and Tailwind CSS v4">
+            <span class="project-name"><span class="project-arrow">→</span> Houston for Humans</span>
+            <span class="project-desc">Civic-data map of Houston's transit &amp; flood risk</span>
+            <span class="project-platform">Web App</span>
+            <span class="project-tech">Next.js + Mapbox GL</span>
+          </div>
+          <div class="project-row reveal-up" data-id="1"
+               data-title="VIAD Optics" data-tagline="Assistive smart glasses for the visually impaired"
+               data-platform="Senior Capstone" data-tech="Python, DepthAI API, MQTT, Raspberry Pi, OAK-D Pro W"
+               data-role="Computer Vision Lead" data-year="2024"
+               data-url="github.com/Ruben304/viadOptics"
+               data-github="https://github.com/Ruben304/viadOptics"
+               data-image="assets/projects/viad-optics.svg"
+               data-overview="A wearable device built with a 5-person senior capstone team to help visually impaired users navigate by detecting obstacles and fast-moving hazards in real time, then alerting them through haptic and audio feedback."
+               data-features="Spatial-detection neural network trained on a Luxonis OAK-D Pro W and Raspberry Pi Zero 2 W via the DepthAI API|Flags obstacles and fast-moving hazards in under 500ms|MQTT (Mosquitto) pub/sub architecture relaying detections between Python services|Multi-modal alerts through a haptic motor and text-to-speech audio|Custom 3D-printed enclosure with rechargeable and swappable power options">
+            <span class="project-name"><span class="project-arrow">→</span> VIAD Optics</span>
+            <span class="project-desc">Computer-vision glasses for hazard detection</span>
+            <span class="project-platform">Capstone</span>
+            <span class="project-tech">Python + DepthAI</span>
+          </div>
+          <div class="project-row reveal-up" data-id="2"
+               data-title="Private Information Retrieval (PIR)" data-tagline="Oblivious storage layer for FoundationDB"
+               data-platform="Systems / Security" data-tech="C, C++, Java, OpenSSL AES-256, FoundationDB"
+               data-role="Systems Engineer" data-year="2024"
+               data-url="github.com/Ruben304/PIR-against-FoundationDB"
+               data-github="https://github.com/Ruben304/PIR-against-FoundationDB"
+               data-image="assets/projects/pir-foundationdb.svg"
+               data-overview="A Path ORAM access layer built with a 4-person team, sitting between client applications and Apple's FoundationDB to obfuscate access patterns so a malicious storage server can't infer sensitive information through traffic analysis."
+               data-features="Client library mirroring FoundationDB's C API plus a tree-structured ORAM server|OpenSSL AES-256 encryption over fixed 1024-byte blocks so real and dummy traffic are indistinguishable|Extended to multi-client concurrent access via a stateless-client / master-client architecture|Simulated inference attacks to validate the scheme against keyword-matching adversaries|Benchmarked Java vs. C++ implementations across data and block sizes to measure overhead">
+            <span class="project-name"><span class="project-arrow">→</span> Private Information Retrieval</span>
+            <span class="project-desc">Path ORAM privacy layer over FoundationDB</span>
+            <span class="project-platform">Systems</span>
+            <span class="project-tech">C/C++ + OpenSSL</span>
+          </div>
+          <div class="project-row reveal-up" data-id="3"
+               data-title="Flood Detector" data-tagline="IoT water-level sensor for Boston's Seaport"
+               data-platform="Hardware / IoT" data-tech="Arduino Nano, ESP32, eTape Sensor"
+               data-role="Embedded Systems" data-year="2023"
+               data-url=""
+               data-github=""
+               data-image="assets/projects/flood-detector.svg"
+               data-overview="A four-person team prototyped a device to detect water levels for Boston's Seaport area — an eTape sensor, Arduino Nano, and ESP32 in a custom aluminum enclosure, running on independent battery power."
+               data-features="eTape sensor voltage readings interpreted against a user-set threshold|Arduino Nano + ESP32 handle sensing and wireless notification|Automated email alerts within 30 seconds of a threshold breach|Custom aluminum enclosure built for outdoor seaport deployment|Independent battery power supply for field placement">
+            <span class="project-name"><span class="project-arrow">→</span> Flood Detector</span>
+            <span class="project-desc">Water-level IoT sensor with instant alerts</span>
+            <span class="project-platform">Hardware</span>
+            <span class="project-tech">Arduino + ESP32</span>
+          </div>
+          <div class="project-row reveal-up" data-id="4"
+               data-title="Housing Demographics" data-tagline="Modeling housing growth against demographic shift"
+               data-platform="Data Science" data-tech="Python, pandas, scikit-learn, AutoGluon, Dash"
+               data-role="Data Scientist" data-year="2023"
+               data-url="github.com/Ruben304/HousingDemographics"
+               data-github="https://github.com/Ruben304/HousingDemographics"
+               data-image="assets/projects/housing-demographics.svg"
+               data-overview="A research project merging Zillow housing data with U.S. Census demographics to test whether population shifts predict county-level housing market growth."
+               data-features="Merged Zillow housing/rental data with Census demographic data at the county level|Interactive Dash dashboards for covariance and correlation analysis|Hierarchical clustering with dendrograms to group similar counties|Binary classification and regression models built with scikit-learn and AutoGluon|Found demographic shift alone has limited predictive power for housing growth">
+            <span class="project-name"><span class="project-arrow">→</span> Housing Demographics</span>
+            <span class="project-desc">Predicting housing growth from census data</span>
+            <span class="project-platform">Data Science</span>
+            <span class="project-tech">Python + scikit-learn</span>
+          </div>
+        </div>
+        <div class="ascii-border reveal-up">/++/+++++++++++++++++++++++++++++++++++++/++++++++++++++++++/+++++++++++/</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-title-wrap"><h2 class="section-title reveal-title">Contact</h2></div>
+      <div class="section-body">
+        <div class="ascii-border reveal-up">/==/=============================================/==================/===========/</div>
+        <div class="contact-inner">
+          <div class="contact-left reveal-up">
+            <h3 class="contact-heading">Get In Touch</h3>
+            <p class="contact-text">I'm currently working full time as a software engineer. Picking up new skills at the moment and trying to learn how to sew and paint.</p>
+            <p class="contact-text dim">Please feel free to shoot me an email to organise a meeting — I enjoy connecting with others.</p>
+            <a href="mailto:hello@ruben.dev" class="contact-btn reveal-up"><span class="contact-btn-prefix">&gt;</span> Email me</a>
+          </div>
+          <div class="contact-right reveal-up"><div class="contact-ascii-art" id="contactAscii"></div></div>
+        </div>
+        <div class="ascii-border reveal-up">/++/+++++++++++++++++++++++++++++++++++++/++++++++++++++++++/+++++++++++/</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT DETAIL PANEL -->
+  <div class="project-detail" id="projectDetail"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-left">/* Ruben F. Carbajal — 2026 */</span>
+        <span class="footer-right">Full Stack Engineer & Hoobyist </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/ascii.js"></script>
+  <script src="js/hero-terminal.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/education.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* ============================================= */
+/* TABLET                                        */
+/* ============================================= */
+@media (max-width: 960px) {
+  .skills-columns-header,
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-columns-header span:nth-child(3),
+  .skills-columns-header span:nth-child(4) {
+    display: none;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .edu-card {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .projects-table-head {
+    grid-template-columns: 180px 1fr 140px;
+  }
+
+  .project-row {
+    grid-template-columns: 180px 1fr 140px;
+  }
+
+  .projects-table-head span:nth-child(4),
+  .project-tech {
+    display: none;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .section-title {
+    font-size: clamp(56px, 10vw, 120px);
+  }
+
+  .detail-about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* ============================================= */
+/* MOBILE                                        */
+/* ============================================= */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  nav {
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+    position: fixed;
+    top: 56px;
+    left: 0; right: 0; bottom: 0;
+    background: rgba(20, 18, 16, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 40px 32px;
+    gap: 24px;
+    z-index: 99;
+  }
+
+  .nav-links.open a {
+    font-size: 16px;
+    color: var(--text-bright);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-name-line {
+    font-size: clamp(40px, 13vw, 80px);
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-resume-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+  .hero-terminal {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 11px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: clamp(48px, 14vw, 80px);
+  }
+
+  .section-title-wrap {
+    margin-bottom: -10px;
+  }
+
+  .skills-columns-header {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+  }
+
+  .skill-col::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-bright);
+    padding: 14px 0 6px;
+    border-bottom: 1px solid var(--grid-bright);
+  }
+
+  .projects-table-head {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-table-head span:nth-child(2),
+  .project-desc,
+  .projects-table-head span:nth-child(3),
+  .project-platform,
+  .projects-table-head span:nth-child(4),
+  .project-tech {
+    display: none;
+  }
+
+  .edu-activity-years {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .edu-tab {
+    font-size: 10px;
+    padding: 10px 12px 10px 0;
+  }
+
+  .ascii-border {
+    font-size: 9px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-right {
+    display: none;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* Project detail mobile */
+  .detail-inner {
+    padding: 80px 20px 60px;
+  }
+
+  .detail-num {
+    font-size: 80px;
+    top: 30px;
+    right: 16px;
+  }
+
+  .detail-about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .detail-back {
+    left: 16px;
+    top: 16px;
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .detail-browser-body {
+    padding: 24px;
+    min-height: 200px;
+  }
+
+  .detail-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .detail-nav-link.next {
+    text-align: left;
+  }
+}
